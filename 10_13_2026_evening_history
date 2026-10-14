@@ -1,0 +1,114 @@
+    1  ls
+    2  pwd
+    3  [200~
+    4  curl --proto '=https' --tlsv1.2 -LsSf https://install.aiken-lang.org | sh
+    5  source ~/.bashrc
+    6  find $HOME -type f -name aikup 2>/dev/null
+    7  echo $PATH
+    8  aiken new david/cardano-day1
+    9  history
+   10  aikup
+   11  aiken --version
+   12  find $HOME -type f -name aikup 2>/dev/null
+   13  echo $PATH
+   14  aiken new david/cardano-day1
+   15  cd cardano-day1/
+   16  vi validators/hello.ak
+   17  aiken check
+   18  aiken build
+   19  cd validators/
+   20  ls
+   21  cd ..
+   22  ls
+   23  ls -lh plutus.json
+   24  cat  plutus.json
+   25  sudo apt-get update
+   26  sudo apt-get install -y ca-certificates curl gnupg
+   27  sudo mkdir -p /etc/apt/keyrings
+   28  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+   29  NODE_MAJOR=22
+   30  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+   31  sudo apt-get install nodejs -y
+   32  sudo apt install npm
+   33  npm install @meshsdk/core
+   34  npm pkg set type=module
+   35  curl https://preprod.koios.rest/api/v1/tip
+   36  npm list @meshsdk/core
+   37  aiken --version
+   38  node --version
+   39  npm init -y
+   40  npm pkg set type=module
+   41  npm install @meshsdk/core @meshsdk/wallet
+   42  npm list @meshsdk/wallet
+   43  npm list @meshsdk/core
+   44  vi wallet.js
+   45  chmod 600 wallet.mnemonic 2>/dev/null
+   46  echo "wallet.mnemonic" >> .gitignore
+   47  node wallet.js
+   48  vi contract.js
+   49  vi lucid.js
+   50  node contract.js
+   51  npm install @lucid-evolution/lucid
+   52  node contract.js
+   53  vi init.js
+   54  node init.js
+   55  ls
+   56  cat contract.js
+   57  history
+   58  vi set.js
+   59  vi get.js
+   60  node contract.js
+   61  node wallet.js
+   62  node init.js
+   63  ls
+   64  vi balance.js
+   65  node balance.js
+   66  history
+   67  node balance.js
+   68  cat balance.js
+   69  node balance.js
+   70  node set.js   "just test"
+   71  node contract.js
+   72  node set.js   "just test432"
+   73  node balance.js
+   74  cat balance.js
+   75  node set.js   "just test432"
+   76  cat balance.js
+   77  node balance.js
+   78  cat balance.js
+   79  ls
+   80  pwd
+   81  ls
+   82  cd cardano-day1/
+   83  ls
+   84  history > 10_13_26_history
+   85  history 
+   86  node balance.js
+   87  vi test.js
+   88  node test.js
+   89  cat balance.js
+   90  node balance.js
+   91  node set.js   "just test432999"
+   92  vi set.js
+   93  cat balance.js
+   94  vi  balance.js
+   95  vi lucid.js
+   96  vi contract.js
+   97  node -e "
+   98  import('./lucid.js').then(async ({getLucid}) => {
+   99    const {getScriptAddress} = await import('./contract.js');
+  100    const lucid = await getLucid();
+  101    console.log('Personal wallet address:');
+  102    console.log(await lucid.wallet().address());
+  103    console.log('\nSmart contract address:');
+  104    console.log(getScriptAddress());
+  105  });
+  106  "
+  107  ls
+  108  cd cardano-day1/
+  109  ls
+  110  history
+  111  node balance.js
+  112  node set.js "ferrari"
+  113  node balance.js
+  114  history > 10_13_2026_evening_history

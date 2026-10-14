@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@lucid-evolution/lucid": "^0.8.1",
+    "@meshsdk/core": "^1.9.1",
+    "@meshsdk/wallet": "^2.0.0-beta.11"
+  },
+  "type": "module",
+  "name": "cardano-day1",
+  "description": "Write validators in the `validators` folder, and supporting functions in the `lib` folder using `.ak` as a file extension.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
